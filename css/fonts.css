@@ -1,0 +1,19 @@
+@font-face{
+    font-family: 'interBold';
+    src: url(../fonts/interBold.ttf);
+}
+
+@font-face{
+    font-family: 'interSemiBold';
+    src: url(../fonts/interSemiBold.ttf);
+}
+
+@font-face{
+    font-family: 'interMedium';
+    src: url(../fonts/interMedium.ttf);
+}
+
+@font-face{
+    font-family: 'plusJakartaSans';
+    src: url(../fonts/plusJakartaSansBold.ttf);
+}

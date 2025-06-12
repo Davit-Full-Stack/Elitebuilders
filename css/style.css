@@ -1,0 +1,163 @@
+@import url('./fonts.css');
+@import url('./normalize.css');
+
+:root {
+    --logo-font: 'interBold';
+    --heading-number-font: 'interSemiBold';
+    --primary-font: 'interMedium';
+    --heading-font: 'plusJakartaSans'; 
+    --primary-color: #000000;
+    --orange: F9773B;
+    --lighting-color: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1440px;
+    padding:40px 54px 40px 54px;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 7px;
+    .Logo_Text{
+        font-family:var(--logo-font);
+        font-size: 18px;
+        line-height: 20px;
+        letter-spacing: -0.32px;
+        color: var(--primary-color);
+    }
+}
+
+.nav-items{
+    display: flex;
+    list-style-type: none;
+    gap: 22px;
+    .nav-item{
+    position: relative;
+        a{
+   text-decoration: none;
+   color:var(--primary-color);
+   font-family: var(--primary-font);
+   font-size: 16px;
+   line-height: 20px;
+   letter-spacing:-0.32px;
+        }
+    }
+}
+
+.nav-item a::after{
+                content: '';
+                display: inline-block;
+                width:100%;
+                height:1px;
+                border:none;
+                background-color:var(--primary-color);
+                position: absolute;
+                bottom: 0;
+                top: 30px;
+                left: 0;
+                z-index: 5;
+                transform: scaleX(0);
+                transform-origin: center;
+                transition: transform 0.3s, height 0.5s;
+            }
+
+            .nav-item a:hover::after{
+                transform:scaleX(1);
+                height: 2px;
+            }
+
+.search-contact{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    gap: 20px;
+    .contact_nav-item:nth-child(2){
+        a{
+            text-decoration: none;
+            color:var(--lighting-color);
+            font-family:var(--primary-font);
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: -0.32px;
+        }
+        width: 120px;
+        height: 38px;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        background-color: var(--primary-color);
+        border-radius: 99px;
+    }
+}
+
+.nav{
+    display: flex;
+}
+
+.search-contact_ul{
+    list-style-type: none;
+}
+
+.Search_Button{
+    width:32px;
+    height:32px;
+    background-color:#F5F5F5;
+    border: none;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    border-radius: 99px;
+    img{
+        width:18px;
+        height:18px;
+    }
+}
+
+.Burger_Menu{
+    display:none;
+    min-width:30px;
+    height:30px;
+}
+
+@media screen and (max-width:1040px){
+    .nav, .search-contact_ul{
+        display:none;
+    }
+    .Burger_Menu{
+        display: block;
+    }
+}
+
+@media screen and (max-width:400px){
+    .Container{
+        padding: 20px 20px;
+    }
+}
+
+@media screen and (max-width:250px){
+    .Logo_Text{
+        font-size: 15px !important;
+    }
+    .Logo{
+        img{
+            width: 26px;
+        }
+    }
+    .Burger_Menu{
+        min-width:27px;
+        height:27px;
+    }
+}
