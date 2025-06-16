@@ -550,3 +550,9 @@
         gap: 60px;
     }
 }
+
+@media screen and (max-width:473px){
+    .first_rectangle{
+        border-radius:16px;
+    }
+}
